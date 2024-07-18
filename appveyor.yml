@@ -1,6 +1,7 @@
 platform: x64
 
 image:
+- Visual Studio 2015
 - Visual Studio 2017
 
 environment:
@@ -15,6 +16,17 @@ test: off
 clone_depth: 1
 
 for:
+-
+  matrix:
+    only:
+      - image: Visual Studio 2015
+
+  environment:
+    LLVM_VERSION: 5.0.1
+    LLVM_HASH: 981543611D719624ACB29A2CFFD6A479CFF36E8AB5EE8A57D8ECA4F9C4C6956F
+    VCVARSALL: 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat'
+    QT_PREFIX: 'C:\Qt\latest\msvc2015_64\lib\cmake'
+
 -
   matrix:
     only:
