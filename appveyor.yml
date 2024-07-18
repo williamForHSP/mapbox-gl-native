@@ -90,5 +90,5 @@ build_script:
 after_build:
 - cmd: 7z a mapbox-gl-native-all.zip %APPVEYOR_BUILD_FOLDER%\build\*.exe %APPVEYOR_BUILD_FOLDER%\build\*.dll %APPVEYOR_BUILD_FOLDER%\build\*.lib %APPVEYOR_BUILD_FOLDER%\build\*.exp %APPVEYOR_BUILD_FOLDER%\build\*.pdb %APPVEYOR_BUILD_FOLDER%\build\*.ilk
 artifacts:
-- path: '%APPVEYOR_BUILD_FOLDER%\build\mapbox-gl-native-all.zip'
+- path: build\mapbox-gl-native-all.zip
   name: mapbox-gl-native-all-%CONFIGURATION%
